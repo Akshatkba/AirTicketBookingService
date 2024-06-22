@@ -8,6 +8,7 @@ const db = require('./models/index');
 const setupAndStartServer = () => {
     app.use(express.urlencoded({extended: true}));
     app.use(express.json());
+
     app.use('/api', apiRoutes);
 
     app.listen(PORT, () => {
